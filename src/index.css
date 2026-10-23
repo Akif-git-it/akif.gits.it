@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-gold-300: #F3E5AB;
+  --color-gold-400: #E6CA65;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #AA820A;
+  --color-charcoal-950: #070708;
+  --color-charcoal-900: #0A0A0B;
+  --color-charcoal-800: #141416;
+  --color-charcoal-700: #1A1A1D;
+  --color-charcoal-600: #26262B;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0A0A0B;
+  color: #E5E7EB;
+  min-height: 100vh;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Glassmorphism card utility with subtle gold border */
+.glass-gold-card {
+  background: rgba(20, 20, 22, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-gold-card:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 0 25px -4px rgba(212, 175, 55, 0.15), 0 10px 28px -6px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.22);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.45);
+}
